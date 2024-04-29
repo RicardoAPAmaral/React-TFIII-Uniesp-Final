@@ -15,6 +15,8 @@ import java.util.List;
 @Table(name = "CATEGORIAS")
 public class Categoria{
 
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_CATEGORIA")
@@ -25,6 +27,7 @@ public class Categoria{
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
     private List<Servico> servicos;
 
+    //d
 
     public Categoria() {
     }
