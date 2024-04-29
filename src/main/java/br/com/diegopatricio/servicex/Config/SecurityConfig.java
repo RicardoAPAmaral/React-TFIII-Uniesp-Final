@@ -28,11 +28,11 @@ public class SecurityConfig {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
         auth.inMemoryAuthentication()
-                .withUser("Diego")
+                .withUser("Ricardo")
                 .password(passwordEncoder.encode("12345"))
                 .roles("USER")
                 .and()
-                .withUser("Patricio")
+                .withUser("Amaral")
                 .password(passwordEncoder.encode("987654"))
                 .roles("USER", "ADMIN");;
     }

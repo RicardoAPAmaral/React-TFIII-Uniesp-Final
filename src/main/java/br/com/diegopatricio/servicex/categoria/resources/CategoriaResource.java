@@ -114,6 +114,7 @@ public class CategoriaResource {
             @ApiResponse(responseCode = "200", description = "Sucesso"),
             @ApiResponse(responseCode = "404", description = "Não encontrado")
     })
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{idCategoria}")
     public ResponseEntity<Void> deletarCategoria(@PathVariable Integer idCategoria) {
         categoriaService.deletarCategoria(idCategoria);
